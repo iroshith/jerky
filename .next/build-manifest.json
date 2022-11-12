@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/utility/irobot-start": [
+    "/utility/list-google-books": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/utility/irobot-start.js"
+      "static/chunks/pages/utility/list-google-books.js"
     ]
   },
   "ampFirstPages": []
