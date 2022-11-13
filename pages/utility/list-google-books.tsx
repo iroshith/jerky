@@ -2,15 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function viewList({ data } ){
+export default function viewList({ data }: any){
     return (
     <div>
     <h1>Google Book List</h1>
     <h2>Please set your search word on keyword parameter</h2>
-    {data.items.map((elem)=>{
+    {data.items.map((elem: any)=>{
         return(
-        <div class="overflow-x-auto">
-            <table class="table w-full">
+        <div className="overflow-x-auto">
+            <table className="table w-full">
                 <thead>
                     <tr>
                         <th></th>
@@ -36,7 +36,7 @@ export default function viewList({ data } ){
     )
 }
 
-export async function getServerSideProps(context){
+export async function getServerSideProps(context: any){
     const id = context.query.keyword;
     const res = await fetch('https://www.googleapis.com/books/v1/volumes?q=' + id)
     const data = await res.json()
