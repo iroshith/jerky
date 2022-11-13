@@ -7,9 +7,7 @@ export default function viewList({ data }: any){
     <div>
     <h1>Google Book List</h1>
     <h2>Please set your search word on keyword parameter</h2>
-    {data.items.map((elem: any)=>{
-        return(
-        <div className="overflow-x-auto">
+    <div className="overflow-x-auto">
             <table className="table w-full">
                 <thead>
                     <tr>
@@ -20,18 +18,18 @@ export default function viewList({ data }: any){
                         </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td>{elem.volumeInfo.title}</td>
-                        <td>{elem.volumeInfo.authors}</td>
-                        <td>{elem.volumeInfo.description}</td>
-                    </tr>
+                    {data.items.map((item: any, index: number) => (
+                        <tr key={item.id}>
+                            <th>{index+1}</th>
+                            <td>{item.volumeInfo.title || 'Title'}</td>
+                            <td>{item.volumeInfo.authors || 'Author'}</td>
+                            <td>{item.volumeInfo.description  || 'Desciption'}</td>
+                        </tr>
+                    ))}
+
                 </tbody>
             </table>
         </div>
-        )
-        }
-    )}
     </div>
     )
 }
