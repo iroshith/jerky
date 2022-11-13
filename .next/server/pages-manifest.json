@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/utility/list-google-books": "pages/utility/list-google-books.js"
+  "/utility/list-google-books": "pages/utility/list-google-books.js",
+  "/": "pages/index.js"
 }

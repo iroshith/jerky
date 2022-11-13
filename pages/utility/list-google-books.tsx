@@ -19,11 +19,11 @@ export default function viewList({ data }: any){
                 </thead>
                 <tbody>
                     {data.items.map((item: any, index: number) => (
-                        <tr>
+                        <tr key={item.id}>
                             <th>{index+1}</th>
-                            <td>{item.volumeInfo.title}</td>
-                            <td>{item.volumeInfo.authors}</td>
-                            <td>{item.volumeInfo.description}</td>
+                            <td>{item.volumeInfo.title || 'Title'}</td>
+                            <td>{item.volumeInfo.authors || 'Author'}</td>
+                            <td>{item.volumeInfo.description  || 'Desciption'}</td>
                         </tr>
                     ))}
 
